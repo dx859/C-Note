@@ -17,3 +17,19 @@ int main(void) {
 int imin(int n, int m) {
     return (n>m) ? m : n;
 }
+
+/*
+1. 函数的原型声明：
+带有参数函数的原型声明
+int imin(int n, int m);
+
+也可以省略变量名
+int imin(int, int);
+
+但是不推荐旧的函数声明，即圆括号内不带任何参数
+int imin();
+
+2. 函数类型：
+函数应该进行类型的声明，其类型与返回值相同，
+
+ */
