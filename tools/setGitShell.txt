@@ -1,0 +1,15 @@
+第一步首先clone代码：
+git clone git://git.kernel.org/pub/scm/git/git.git
+第二步拷贝脚本
+把文件contrib/completion/git-completion.bash 拷到~下，重命名为.git-completion.sh
+把文件contrib/completion/git-prompt.sh 拷到~下，重命名为.git-prompt.sh
+可以先看一下这两个脚本的内容，里面有简单介绍。
+第三步写入.bashrc以下内容
+source ~/.git-completion.sh
+source ~/.git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWUPSTREAM="verbose git svn"
+PS1='\[\033[1;31m\]\u@\h \[\033[1;34m\]\W\[\033[1;31m\]$(__git_ps1 " (%s)")\[\033[1;35m\] -> \[\033[0m\]'
+第四步注销或者重新启动，此时命令行应该已经改变。成功。
