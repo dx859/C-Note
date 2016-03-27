@@ -1,0 +1,12 @@
+gcc 参数：
+-o: 指定输出文件名
+-c: 编译但是不连接
+
+g++ -c main.cpp -o main.o // 表示编译 main.cpp 并且输出文件为 main.o => 编译只检测语法。
+
+链接：把linux库函数和编译个结果一起连接进来。
+
+makefile 文件默认只执行一个标号，如果需要执行其他标号就可以在make 后面加上需要的标号
+make clean
+
+make是根据.cpp和.o文件的最后修改日期判断cpp文件是否需要编译
